@@ -232,3 +232,18 @@
     background-color: hsl(var(--rejected));
   }
 }
+.login-page {
+  @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-300;
+}
+
+.shadow-elevated {
+  @apply shadow-lg hover:shadow-2xl transition-shadow duration-300;
+}
+
+.button-hover-effect {
+  @apply hover:scale-105 transition-transform duration-300 ease-in-out shadow-md hover:shadow-lg;
+}
+
+.input-hover-effect {
+  @apply focus:shadow-md focus:shadow-primary/30 transition-all duration-300 ease-in-out;
+}

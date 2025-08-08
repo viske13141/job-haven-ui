@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -23,19 +29,19 @@ const Login = () => {
 
   if (!role) {
     return (
-      <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4">
+      <div className="login-page min-h-screen flex items-center justify-center p-4">
         <div className="absolute top-4 right-4">
           <ThemeToggle />
         </div>
-        
+
         <div className="w-full max-w-md animate-fade-in">
-          <Card className="shadow-elegant border-0 bg-card/95 backdrop-blur-sm">
+          <Card className="shadow-elevated border-0 bg-card/95 backdrop-blur-sm">
             <CardHeader className="text-center space-y-6">
               <div className="mx-auto w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
                 <Briefcase className="w-8 h-8 text-primary-foreground" />
               </div>
               <div>
-                <CardTitle className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                <CardTitle className="text-2xl font-bold bg-clip-text">
                   JobPortal Pro
                 </CardTitle>
                 <CardDescription className="text-muted-foreground">
@@ -47,7 +53,7 @@ const Login = () => {
               <Button
                 variant="hero"
                 size="lg"
-                className="w-full h-14"
+                className="w-full h-14 button-hover-effect"
                 onClick={() => setRole("admin")}
               >
                 <User className="w-5 h-5 mr-2" />
@@ -56,7 +62,7 @@ const Login = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full h-14 hover-lift"
+                className="w-full h-14 hover-lift button-hover-effect"
                 onClick={() => setRole("jobseeker")}
               >
                 <Briefcase className="w-5 h-5 mr-2" />
@@ -70,13 +76,13 @@ const Login = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4">
+    <div className="login-page min-h-screen flex items-center justify-center p-4">
       <div className="absolute top-4 right-4">
         <ThemeToggle />
       </div>
-      
+
       <div className="w-full max-w-md animate-scale-in">
-        <Card className="shadow-elegant border-0 bg-card/95 backdrop-blur-sm">
+        <Card className="shadow-elevated border-0 bg-card/95 backdrop-blur-sm">
           <CardHeader className="text-center space-y-4">
             <div className="mx-auto w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
               {role === "admin" ? (
@@ -106,7 +112,7 @@ const Login = () => {
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10 transition-smooth focus:shadow-card"
+                    className="pl-10 input-hover-effect"
                   />
                 </div>
               </div>
@@ -120,24 +126,24 @@ const Login = () => {
                     placeholder="Enter your password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="pl-10 transition-smooth focus:shadow-card"
+                    className="pl-10 input-hover-effect"
                   />
                 </div>
               </div>
             </div>
-            
+
             <div className="space-y-3">
               <Button
                 variant="hero"
                 size="lg"
-                className="w-full"
+                className="w-full button-hover-effect"
                 onClick={handleLogin}
               >
                 Sign In
               </Button>
               <Button
                 variant="ghost"
-                className="w-full"
+                className="w-full button-hover-effect"
                 onClick={() => setRole(null)}
               >
                 Back to Role Selection

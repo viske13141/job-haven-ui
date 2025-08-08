@@ -123,7 +123,7 @@ const AdminJobs = () => {
               <ArrowLeft className="w-4 h-4" />
             </Button>
             <div>
-              <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold  bg-clip-text ">
                 Job Management
               </h1>
               <p className="text-muted-foreground">Create and manage job postings</p>

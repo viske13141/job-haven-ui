@@ -152,7 +152,7 @@ const JobSeekerDashboard = () => {
       <header className="border-b bg-card shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold  bg-clip-text ">
               Job Dashboard
             </h1>
             <p className="text-muted-foreground">Find your next opportunity</p>
